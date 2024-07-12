@@ -1,0 +1,8 @@
+
+.navbar-expand-lg .navbar-collapse {
+    flex-direction: row-reverse !important;
+}
+
+.app-brand .layout-sidenav-toggle {
+    margin-left: 100px !important;
+}
