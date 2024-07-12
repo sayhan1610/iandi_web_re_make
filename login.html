@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light-style layout-fixed" id="layout">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="Backoffice Panel - MultiCaret" />
+    <meta name="author" content="MultiCaret" />
+    <meta
+      name="csrf-token"
+      content="r72FMJKpYtleyKeVntXGfnKJyeip4ObGP8xaeXzR"
+    />
+    <link rel="icon" type="image/png" href="/favicon.jpg" />
+
+    <title>Dashboard - Login</title>
+
+    <!-- Main font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="/admin-assets/css/custom.css?ver=1.0" />
+    <link rel="stylesheet" href="/admin-assets/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="/admin-assets/fonts/ionicons.css" />
+    <link rel="stylesheet" href="/admin-assets/fonts/linearicons.css" />
+
+    <link rel="stylesheet" href="/admin-assets/fonts/pe-icon-7-stroke.css" />
+
+    <!-- Core stylesheets -->
+    <link
+      rel="stylesheet"
+      href="/admin-assets/css/rtl/bootstrap.css"
+      class="theme-settings-bootstrap-css"
+    />
+    <link
+      rel="stylesheet"
+      href="/admin-assets/css/rtl/appwork.css"
+      class="theme-settings-appwork-css"
+    />
+    <link
+      rel="stylesheet"
+      href="/admin-assets/css/rtl/theme-shadow.css"
+      class="theme-settings-theme-css"
+    />
+    <link
+      rel="stylesheet"
+      href="/admin-assets/css/rtl/colors.css"
+      class="theme-settings-colors-css"
+    />
+    <link rel="stylesheet" href="/admin-assets/css/rtl/uikit.css" />
+
+    <link
+      rel="stylesheet"
+      href="/admin-assets/libs/sweetalert2/sweetalert2.css"
+    />
+    <link rel="stylesheet" href="/admin-assets/libs/select2/select2.css" />
+
+    <!-- Load polyfills -->
+    <script src="/admin-assets/js/polyfills.js"></script>
+    <script>
+      document["documentMode"] === 10 &&
+        document.write(
+          '<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>'
+        );
+    </script>
+
+    <!-- Layout helpers -->
+    <script src="/admin-assets/js/polyfills.js"></script>
+    <script>
+      document["documentMode"] === 10 &&
+        document.write(
+          '<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>'
+        );
+    </script>
+
+    <script src="/admin-assets/js/material-ripple.js"></script>
+    <script src="/admin-assets/js/layout-helpers.js"></script>
+
+    <!-- Core scripts -->
+    <script src="/admin-assets/js/pace.js"></script>
+    <!-- Libs -->
+    <!-- `perfect-scrollbar` library required by SideNav plugin -->
+    <link
+      rel="stylesheet"
+      href="/admin-assets/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+
+    <script>
+      window.App = {
+        csrfToken: "r72FMJKpYtleyKeVntXGfnKJyeip4ObGP8xaeXzR",
+        env: "production",
+        default_locale: "en",
+        locale: "en",
+        dir: "ltr",
+        authenticated: false,
+        domain: "https:\/\/istanbulandi.org.tr",
+        translations: {
+          delete_confirmation_title: "Are you sure?",
+          delete_confirmation_message: "You won't be able to revert this!",
+          delete_confirmation_btn: "Yes, delete it!",
+          deleted_title: "Deleted!",
+          deleted_message: "Your record has been deleted.",
+          cancel_btn_text: "Cancel",
+          record_already_exists: "Record already exists",
+          mark_as_unread: "Make as unread",
+          mark_as_read: "Make as read",
+          saved: "Saved",
+          error: "Error",
+          working_day_1: "strings.working_day_1",
+          working_day_2: "strings.working_day_2",
+          working_day_3: "strings.working_day_3",
+          working_day_4: "strings.working_day_4",
+          working_day_5: "strings.working_day_5",
+          working_day_6: "strings.working_day_6",
+          working_day_7: "strings.working_day_7",
+          swal: { 0: "title", text: "", confirmButtonText: "" },
+        },
+        routes: { mediaStore: "https:\/\/istanbulandi.org.tr\/admin\/media" },
+        tinyMce: {
+          plugins:
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor",
+          toolbar1:
+            "insertfile undo redo | fontsizeselect styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons",
+          options: { language: "en", directionality: "ltr" },
+        },
+      };
+    </script>
+
+    <style>
+      .authentication-wrapper {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      .authentication-wrapper .authentication-inner {
+        width: 100%;
+      }
+
+      .authentication-wrapper.authentication-1,
+      .authentication-wrapper.authentication-2,
+      .authentication-wrapper.authentication-4 {
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .authentication-wrapper.authentication-1 .authentication-inner {
+        max-width: 300px;
+      }
+
+      .authentication-wrapper.authentication-2 .authentication-inner {
+        max-width: 380px;
+      }
+
+      .authentication-wrapper.authentication-3 {
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -ms-flex-pack: stretch;
+        justify-content: stretch;
+      }
+
+      .authentication-wrapper.authentication-3 .authentication-inner {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -ms-flex-pack: stretch;
+        justify-content: stretch;
+      }
+
+      .authentication-wrapper.authentication-4 .authentication-inner {
+        max-width: 800px;
+      }
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .authentication-wrapper::after {
+          content: "";
+          display: block;
+          -ms-flex: 0 0 0%;
+          flex: 0 0 0%;
+          min-height: inherit;
+          width: 0;
+          font-size: 0;
+        }
+      }
+    </style>
+
+    <!-- Application stylesheets -->
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body>
+    <div class="page-loader">
+      <div class="bg-primary"></div>
+    </div>
+
+    <div id="vue-app">
+      <div
+        class="authentication-wrapper authentication-2 ui-bg-cover ui-bg-overlay-container px-4"
+        style="background-image: url('/images/auth-bg.jpg')"
+      >
+        <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+        <div class="authentication-inner py-5">
+          <div class="card">
+            <div class="p-4 p-sm-5">
+              <!-- Logo -->
+              <div
+                class="d-flex justify-content-center align-items-center pb-2 mb-2"
+              >
+                <div class="w-50">
+                  <img src="/images/logo.png" class="w-100 h-100" />
+                </div>
+              </div>
+              <!-- / Logo -->
+
+              <h5 class="text-center text-muted font-weight-normal mb-4">
+                Login to Your Account
+              </h5>
+
+              <!-- Form -->
+              <form
+                class="form-horizontal form-material"
+                id="loginform"
+                method="POST"
+                action="/login"
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="r72FMJKpYtleyKeVntXGfnKJyeip4ObGP8xaeXzR"
+                />
+                <div class="form-group">
+                  <label for="login" class="form-label">Email Address</label>
+                  <input
+                    id="login"
+                    type="email"
+                    placeholder="example@domain.com"
+                    class="form-control"
+                    name="login"
+                    value=""
+                    required
+                    autofocus
+                    dir="ltr"
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    for="password"
+                    class="form-label d-flex justify-content-between align-items-end"
+                  >
+                    Password
+                  </label>
+                  <input
+                    id="password"
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    required
+                    dir="ltr"
+                  />
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center m-0"
+                >
+                  <label class="custom-control custom-checkbox m-0">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      name="remember"
+                    />
+                    <span class="custom-control-label">Remember me</span>
+                  </label>
+                  <button type="submit" class="btn btn-primary">Log In</button>
+                </div>
+              </form>
+              <!-- / Form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core scripts -->
+    <script src="/js/admin.js"></script>
+    <script src="/admin-assets/js/sidenav.js"></script>
+
+    <!-- Libs -->
+    <script src="/admin-assets/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  </body>
+</html>
